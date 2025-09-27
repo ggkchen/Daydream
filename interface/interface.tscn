@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://do5v8hth8te5r"]
+
+[ext_resource type="PackedScene" uid="uid://dmetoawbd7ndy" path="res://interface/moneycounter.tscn" id="1_6nxxo"]
+
+[node name="interface" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -579.0
+offset_top = -386.0
+offset_right = -579.0
+offset_bottom = -386.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="moneycounter" parent="." instance=ExtResource("1_6nxxo")]
+layout_mode = 1
