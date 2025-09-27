@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://b71p0iroqsc1q"]
 
 [ext_resource type="Texture2D" uid="uid://cchn0xfdyd6kb" path="res://AnimationSheet.png" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://cs04qlv6cpheg" path="res://Scripts/player_controller.gd" id="1_i3pqv"]
-[ext_resource type="Script" uid="uid://dcsr0h2kn5axe" path="res://Scripts/player_animator.gd" id="2_hqtel"]
+[ext_resource type="Script" uid="uid://cs04qlv6cpheg" path="res://player_controller.gd" id="1_i3pqv"]
+[ext_resource type="Script" uid="uid://dcsr0h2kn5axe" path="res://player_animator.gd" id="2_hqtel"]
 [ext_resource type="PackedScene" uid="uid://do5v8hth8te5r" path="res://interface/interface.tscn" id="4_hqtel"]
 
 [sub_resource type="Animation" id="Animation_2hs0m"]
@@ -113,7 +113,7 @@ position = Vector2(0, -9)
 shape = SubResource("CapsuleShape2D_i3pqv")
 
 [node name="interface" parent="." instance=ExtResource("4_hqtel")]
-offset_left = 280.0
-offset_top = -321.0
-offset_right = 280.0
-offset_bottom = -321.0
+offset_left = 580.0
+offset_top = -326.0
+offset_right = 580.0
+offset_bottom = -326.0

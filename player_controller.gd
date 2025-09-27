@@ -4,7 +4,15 @@ class_name PlayerController
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
-var direction = 0
+var direction := 0
+
+signal money_changed(new_value: int)
+
+var money: int = 0   # simple variable
+
+func _ready() -> void:
+	add_to_group("player")  # make this node findable by the label
+	emit_signal("money_changed", money)  # update UI on start
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -20,7 +28,22 @@ func _physics_process(delta: float) -> void:
 	direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
+		add_money(2)
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+
+
+# --- Money helpers ---
+func add_money(amount: int) -> void:
+	money += amount
+	emit_signal("money_changed", money)
+
+func spend_money(amount: int) -> bool:
+	if money >= amount:
+		money -= amount
+		emit_signal("money_changed", money)
+		return true
+	return false
