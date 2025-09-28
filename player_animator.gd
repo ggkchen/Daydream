@@ -3,7 +3,7 @@ extends Node
 @export var animationplayer : AnimationPlayer
 @export var sprite : Sprite2D
 
-func _process(delta):
+func _process(_delta):
 	if playercontroller.direction == 1:
 		sprite.flip_h = false
 	elif playercontroller.direction == -1:
