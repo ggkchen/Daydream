@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bb78ba6mvh2ry"
+path="res://.godot/imported/Mission Completed.wav-258f8569f72ff1f94d445af94864ae1c.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/FreeSFX/FreeSFX/Voices/Mission Completed.wav"
+dest_files=["res://.godot/imported/Mission Completed.wav-258f8569f72ff1f94d445af94864ae1c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

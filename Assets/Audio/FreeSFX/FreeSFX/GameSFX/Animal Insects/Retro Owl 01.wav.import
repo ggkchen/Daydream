@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d17h7iplaui8d"
+path="res://.godot/imported/Retro Owl 01.wav-bf84c7964e1fee6f26fed129df285de5.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/FreeSFX/FreeSFX/GameSFX/Animal Insects/Retro Owl 01.wav"
+dest_files=["res://.godot/imported/Retro Owl 01.wav-bf84c7964e1fee6f26fed129df285de5.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

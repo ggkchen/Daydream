@@ -18,8 +18,9 @@ config/icon="res://icon.svg"
 [autoload]
 
 SigBank="*res://casinoScripts/SignalBank.gd"
-Player_Controller="*res://player_controller.gd"
+Player_Controller="*res://Assets/Scripts/player_controller.gd"
 FadeScreen="*res://Assets/Scenes/Areas/fade_screen.tscn"
+AudioControllerMain="*res://Assets/Audio/audio_controller.tscn"
 
 [input]
 

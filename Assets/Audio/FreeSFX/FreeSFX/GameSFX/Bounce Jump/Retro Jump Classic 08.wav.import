@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bhu8f4tpguhv3"
+path="res://.godot/imported/Retro Jump Classic 08.wav-7363afc11f0e19cd3d682fc0dacad6e4.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/FreeSFX/FreeSFX/GameSFX/Bounce Jump/Retro Jump Classic 08.wav"
+dest_files=["res://.godot/imported/Retro Jump Classic 08.wav-7363afc11f0e19cd3d682fc0dacad6e4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

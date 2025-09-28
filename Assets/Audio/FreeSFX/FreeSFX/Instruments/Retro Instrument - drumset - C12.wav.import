@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bc1kxqr3pe6f8"
+path="res://.godot/imported/Retro Instrument - drumset - C12.wav-57a9567b38a1f5f33fc8592c0d621814.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/FreeSFX/FreeSFX/Instruments/Retro Instrument - drumset - C12.wav"
+dest_files=["res://.godot/imported/Retro Instrument - drumset - C12.wav-57a9567b38a1f5f33fc8592c0d621814.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

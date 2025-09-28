@@ -1,10 +1,11 @@
 [gd_scene load_steps=6 format=3 uid="uid://do5v8hth8te5r"]
 
 [ext_resource type="PackedScene" uid="uid://dmetoawbd7ndy" path="res://interface/moneycounter.tscn" id="1_6nxxo"]
-[ext_resource type="Texture2D" uid="uid://by3jvmsoopwc0" path="res://Screenshot 2025-09-28 113223.png" id="2_0scnv"]
-[ext_resource type="Texture2D" uid="uid://dq8r8672523rx" path="res://Screenshot 2025-09-28 113549.png" id="3_talkl"]
+[ext_resource type="Texture2D" uid="uid://by3jvmsoopwc0" path="res://Assets/Sprites/Screenshot 2025-09-28 113223.png" id="2_0scnv"]
+[ext_resource type="Texture2D" uid="uid://dq8r8672523rx" path="res://Assets/Sprites/Screenshot 2025-09-28 113549.png" id="3_talkl"]
 [ext_resource type="Theme" uid="uid://c1b2pe44iptm4" path="res://theme/default_theme.tres" id="4_1df0r"]
 [ext_resource type="Script" uid="uid://dys7akteiqehl" path="res://interface/label.gd" id="6_talkl"]
+
 
 [node name="interface" type="Control"]
 layout_mode = 3
