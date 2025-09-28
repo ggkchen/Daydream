@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://3cvygnno1c1a"]
+
+[ext_resource type="Script" uid="uid://ckh6nsoxxvan7" path="res://casinoScene/confetti.gd" id="1_smimb"]
+[ext_resource type="Texture2D" uid="uid://dloirvdw0mqkw" path="res://Screenshot 2025-09-28 131255.png" id="2_ovyj8"]
+[ext_resource type="Script" uid="uid://nbi08xyu4b78" path="res://casinoScene/confettii.gd" id="3_sf15k"]
+[ext_resource type="AudioStream" uid="uid://nyt01mnkn0bh" path="res://DODODODODOODOOODOOOOO.mp3" id="4_smimb"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_cnoom"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(64, 1, 1)
+emission_shape = 3
+emission_box_extents = Vector3(9, 9, 6)
+direction = Vector3(0, -1, 0)
+initial_velocity_min = 301.59
+initial_velocity_max = 1000.0
+gravity = Vector3(0, 200, 0)
+linear_accel_min = -2.2351742e-06
+linear_accel_max = -2.2351742e-06
+scale_min = 0.29999998
+scale_max = 0.39999998
+color = Color(1, 1, 0, 1)
+hue_variation_min = -1.0
+hue_variation_max = 0.99999994
+
+[node name="Confetti" type="Node2D"]
+script = ExtResource("1_smimb")
+
+[node name="CONFETTII" type="GPUParticles2D" parent="."]
+position = Vector2(589, 691)
+emitting = false
+amount = 200
+amount_ratio = 0.5
+texture = ExtResource("2_ovyj8")
+collision_base_size = 0.0
+process_material = SubResource("ParticleProcessMaterial_cnoom")
+script = ExtResource("3_sf15k")
+
+[node name="winn" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_smimb")
+volume_db = 24.0
+pitch_scale = 1.02

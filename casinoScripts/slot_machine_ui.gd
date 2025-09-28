@@ -67,7 +67,9 @@ func _calculateWinning():
 		$moneychangeamount.add_theme_color_override("font_color",Color(0.0, 1.0, 0.0, 1.0))
 		Player_Controller.add_money(betResult)
 		$betAmount.max_value = money
-		confettiiiti.play_confetti()
+		CONFETTIITI.play_confetti()
+		CONFETTIITI.play_music()
+		#confettiiiti.play_confetti()
 	else:
 		$Result.text = "You lost!"
 		$moneychangeamount.text = str(betResult)+"$"
@@ -75,6 +77,7 @@ func _calculateWinning():
 		Player_Controller.minus_money(betResult)
 		$betAmount.max_value = money
 func _on_spin_button_button_up():
+	Audiocontrollerslotmachine.play_music()
 	SigBank.startRoll.emit(1,2)
 	SigBank.startRoll.emit(2,2.5)
 	SigBank.startRoll.emit(3,3)
