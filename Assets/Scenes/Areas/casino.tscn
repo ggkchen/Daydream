@@ -28,11 +28,7 @@ sources/3 = SubResource("TileSetAtlasSource_3wuxc")
 size = Vector2(40, 59)
 
 [node name="Casino" type="Node2D"]
-<<<<<<< HEAD
 script = ExtResource("1_roe7i")
-=======
-position = Vector2(-226, 54)
->>>>>>> 574fe3edb9809d41162a992c5d37923b2570b457
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(0.99999994, 0)

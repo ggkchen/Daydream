@@ -1,6 +1,0 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://c1b2pe44iptm4"]
-
-[ext_resource type="FontFile" uid="uid://d28vbsevnv2ei" path="res://theme/ARCADECLASSIC.TTF" id="1_ag65a"]
-
-[resource]
-default_font = ExtResource("1_ag65a")
