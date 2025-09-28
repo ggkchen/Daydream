@@ -5,6 +5,7 @@ class_name PlayerController
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 var direction := 0
+var start_pos = Vector2()
 
 signal money_changed(new_value: int)
 
@@ -13,6 +14,7 @@ var money: int = 0   # simple variable
 func _ready() -> void:
 	add_to_group("player")  # make this node findable by the label
 	emit_signal("money_changed", money)  # update UI on start
+	start_pos = position
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -31,6 +33,11 @@ func _physics_process(delta: float) -> void:
 		add_money(2)
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+
+	#resets character
+	if position.y > 300:
+		position = start_pos
+		velocity = Vector2.ZERO
 
 	move_and_slide()
 
