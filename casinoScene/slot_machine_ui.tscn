@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://c0fincq6b537q"]
+[gd_scene load_steps=6 format=3 uid="uid://c0fincq6b537q"]
 
 [ext_resource type="PackedScene" uid="uid://c3c2cqtdm7tb5" path="res://casinoScene/reel.tscn" id="1_l6rrs"]
 [ext_resource type="Script" uid="uid://b2st3wmpciwkt" path="res://casinoScripts/slot_machine_ui.gd" id="1_t2n4x"]
+[ext_resource type="PackedScene" uid="uid://do5v8hth8te5r" path="res://interface/interface.tscn" id="3_p74vq"]
+[ext_resource type="FontFile" uid="uid://d28vbsevnv2ei" path="res://theme/ARCADECLASSIC.TTF" id="4_aptit"]
+
+[sub_resource type="Theme" id="Theme_e1xop"]
+default_font = ExtResource("4_aptit")
+default_font_size = 38
 
 [node name="SlotMachineUI" type="Control"]
 layout_mode = 3
@@ -120,5 +126,28 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 30
 text = "RESULT"
 horizontal_alignment = 1
+
+[node name="interface" parent="." instance=ExtResource("3_p74vq")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 0
+grow_vertical = 1
+
+[node name="moneychangeamount" type="Label" parent="."]
+layout_mode = 0
+offset_left = 923.0
+offset_top = 100.0
+offset_right = 1073.0
+offset_bottom = 144.0
+theme = SubResource("Theme_e1xop")
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "-100"
+horizontal_alignment = 2
 
 [connection signal="button_up" from="SpinButton" to="." method="_on_spin_button_button_up"]

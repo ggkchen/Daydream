@@ -54,3 +54,8 @@ func spend_money(amount: int) -> bool:
 		emit_signal("money_changed", money)
 		return true
 	return false
+	
+	
+func minus_money(amount: int) -> void:
+	money -= abs(amount)
+	emit_signal("money_changed", money)

@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 SigBank="*res://casinoScripts/SignalBank.gd"
+Player_Controller="*res://player_controller.gd"
 
 [input]
 
