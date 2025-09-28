@@ -4,7 +4,11 @@ extends Node
 @export var sprite : Sprite2D
 
 func _process(_delta):
-	if playercontroller.direction == 1:
+	if playercontroller.direction == 1 and playercontroller.controls_inverted:
+		sprite.flip_h = true
+	elif playercontroller.direction == -1 and playercontroller.controls_inverted:
+		sprite.flip_h = false
+	elif playercontroller.direction == 1:
 		sprite.flip_h = false
 	elif playercontroller.direction == -1:
 		sprite.flip_h = true

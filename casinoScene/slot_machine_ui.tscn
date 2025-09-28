@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://c0fincq6b537q"]
+[gd_scene load_steps=8 format=3 uid="uid://c0fincq6b537q"]
 
 [ext_resource type="PackedScene" uid="uid://c3c2cqtdm7tb5" path="res://casinoScene/reel.tscn" id="1_l6rrs"]
 [ext_resource type="Script" uid="uid://b2st3wmpciwkt" path="res://casinoScripts/slot_machine_ui.gd" id="1_t2n4x"]
 [ext_resource type="PackedScene" uid="uid://do5v8hth8te5r" path="res://interface/interface.tscn" id="3_p74vq"]
 [ext_resource type="FontFile" uid="uid://d28vbsevnv2ei" path="res://theme/ARCADECLASSIC.TTF" id="4_aptit"]
+[ext_resource type="Script" uid="uid://fb76haq4wt06" path="res://casinoScene/x_button.gd" id="5_aptit"]
+[ext_resource type="Script" uid="uid://cuniajg0yo2th" path="res://casinoScene/button_2.gd" id="6_e1xop"]
 
 [sub_resource type="Theme" id="Theme_e1xop"]
 default_font = ExtResource("4_aptit")
@@ -17,6 +19,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_t2n4x")
+
+[node name="moneychangeamount" type="Label" parent="."]
+layout_mode = 0
+offset_left = 702.0
+offset_top = 30.0
+offset_right = 852.0
+offset_bottom = 81.0
+theme = SubResource("Theme_e1xop")
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "-100"
+horizontal_alignment = 2
 
 [node name="ReelContainer1" type="Control" parent="."]
 layout_mode = 1
@@ -139,15 +152,23 @@ offset_bottom = 0.0
 grow_horizontal = 0
 grow_vertical = 1
 
-[node name="moneychangeamount" type="Label" parent="."]
-layout_mode = 0
-offset_left = 923.0
-offset_top = 100.0
-offset_right = 1073.0
-offset_bottom = 144.0
-theme = SubResource("Theme_e1xop")
+[node name="exitbutton" type="Button" parent="."]
+layout_mode = 1
+offset_right = 58.0
+offset_bottom = 52.0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
-text = "-100"
-horizontal_alignment = 2
+theme_override_font_sizes/font_size = 30
+text = "x"
+script = ExtResource("5_aptit")
+
+[node name="sacrificebraincellsbutton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 990.0
+offset_top = 598.0
+offset_right = 1149.0
+offset_bottom = 645.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "Sacrifice Brain Cells"
+script = ExtResource("6_e1xop")
 
 [connection signal="button_up" from="SpinButton" to="." method="_on_spin_button_button_up"]

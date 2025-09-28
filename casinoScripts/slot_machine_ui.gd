@@ -62,13 +62,13 @@ func _calculateWinning():
 		winningMultiplier = -1
 	betResult = betValue * winningMultiplier
 	if betResult>0:
-		$Result.text = "+ "+str(betResult)
+		$Result.text = "You won!"
 		$moneychangeamount.text = "+" + str(betResult)+"$"
 		$moneychangeamount.add_theme_color_override("font_color",Color(0.0, 1.0, 0.0, 1.0))
 		Player_Controller.add_money(betResult)
 		$betAmount.max_value = money
 	else:
-		$Result.text = "You lost!  "+str(betResult)
+		$Result.text = "You lost!"
 		$moneychangeamount.text = str(betResult)+"$"
 		$moneychangeamount.add_theme_color_override("font_color",Color(1.0, 0.0, 0.0, 1.0))
 		Player_Controller.minus_money(betResult)
