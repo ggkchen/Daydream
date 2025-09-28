@@ -1,0 +1,93 @@
+[gd_scene load_steps=8 format=3 uid="uid://v6fo8qmpl0a"]
+
+[ext_resource type="Script" uid="uid://b3x5p08aybohe" path="res://Assets/Scripts/main_menu.gd" id="1_3go2i"]
+[ext_resource type="Texture2D" uid="uid://bx46e07dxadsr" path="res://Assets/Sprites/menuBg.png" id="1_beau4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3go2i"]
+texture = ExtResource("1_beau4")
+
+[sub_resource type="FontVariation" id="FontVariation_6e8h4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6e8h4"]
+bg_color = Color(0.66221243, 0.18089426, 0.28427172, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.08468992, 0.08468992, 0.08468992, 0.6)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_beau4"]
+bg_color = Color(0.4839028, 0.11549375, 0.19597054, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.08468992, 0.08468992, 0.08468992, 0.6)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3go2i"]
+bg_color = Color(0.5904368, 0.15388212, 0.24838582, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.08468992, 0.08468992, 0.08468992, 0.6)
+shadow_size = 5
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3go2i")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_3go2i")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.35677084
+anchor_top = 0.47993827
+anchor_right = 0.5928819
+anchor_bottom = 0.7222222
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 40
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("FontVariation_6e8h4")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_6e8h4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_beau4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3go2i")
+theme_override_styles/focus = SubResource("StyleBoxFlat_6e8h4")
+text = "PLAY"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("FontVariation_6e8h4")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_6e8h4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_beau4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3go2i")
+theme_override_styles/focus = SubResource("StyleBoxFlat_6e8h4")
+text = "INSTRUCTIONS"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_instructions_pressed"]

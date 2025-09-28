@@ -19,8 +19,7 @@ config/icon="res://icon.svg"
 
 SigBank="*res://casinoScripts/SignalBank.gd"
 Player_Controller="*res://player_controller.gd"
-Brain_cell_counter="*res://interface/braincellcounter.gd"
-confettiiiti="*res://casinoScene/confettii.gd"
+FadeScreen="*res://Assets/Scenes/Areas/fade_screen.tscn"
 
 [input]
 
