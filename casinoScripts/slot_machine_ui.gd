@@ -25,7 +25,7 @@ var money: int:
 
 func _ready():
 	$moneychangeamount.text = ""
-	Player_Controller.add_money(100)
+	#Player_Controller.add_money(100)
 	$betAmount.max_value = money
 	add_to_group("player")  # make this node findable by the label
 	emit_signal("money_changed",  money)  # update UI on start
@@ -67,6 +67,7 @@ func _calculateWinning():
 		$moneychangeamount.add_theme_color_override("font_color",Color(0.0, 1.0, 0.0, 1.0))
 		Player_Controller.add_money(betResult)
 		$betAmount.max_value = money
+		confettiiiti.play_confetti()
 	else:
 		$Result.text = "You lost!"
 		$moneychangeamount.text = str(betResult)+"$"

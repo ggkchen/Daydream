@@ -12,7 +12,7 @@ static var brainSacrificeCounter = 10
 signal money_changed(new_value: int)
 var controls_inverted: bool = false
 
-var money: int = 0   # simple variable
+var money: int = 100   # simple variable
 
 func _ready() -> void:
 	add_to_group("player")  # make this node findable by the label
@@ -31,7 +31,7 @@ func _on_timer_timeout() -> void:
 # Every 5s, check your var
 	if randi_range(0, brainSacrificeCounter) == 0:
 		controls_inverted = not controls_inverted
-		print("dumby!"+str(brainSacrificeCounter))
+		#print("dumby!"+str(brainSacrificeCounter))
 
 	
 

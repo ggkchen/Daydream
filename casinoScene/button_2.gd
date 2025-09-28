@@ -29,6 +29,5 @@ func _pressed() -> void:
 		Player_Controller.brainSacrificeCounter -= 1
 		Player_Controller.add_money(100)
 		text = "Sacrificed!"
-		#Brain_cell_counter.update_text(str(Player_Controller.brainSacrificeCounter))
 		await get_tree().create_timer(1.0).timeout
 		text = "Sacrifice Brain Cells"

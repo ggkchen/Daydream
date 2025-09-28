@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://dmetoawbd7ndy"]
 
 [ext_resource type="Texture2D" uid="uid://dod74lelggyng" path="res://Assets/Sprites/Screenshot 2025-09-27 133320.png" id="1_og6wj"]
-[ext_resource type="Texture2D" uid="uid://bjmtl67i4jyxt" path="res://Screenshot 2025-09-27 134526.png" id="2_b3smf"]
+[ext_resource type="Texture2D" uid="uid://c8hulns7byjh5" path="res://Screenshot 2025-09-27 134526.png" id="2_b3smf"]
 [ext_resource type="Theme" uid="uid://c1b2pe44iptm4" path="res://theme/default_theme.tres" id="3_3dere"]
-[ext_resource type="Script" uid="uid://dys7akteiqehl" path="res://interface/label.gd" id="4_yd8bs"]
+[ext_resource type="Script" uid="uid://c7qwt6rrhntcy" path="res://interface/money_label.gd" id="4_yd8bs"]
 
 [node name="moneycounter" type="NinePatchRect"]
 anchors_preset = 1
