@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b71p0iroqsc1q"]
+[gd_scene load_steps=13 format=3 uid="uid://b71p0iroqsc1q"]
 
 [ext_resource type="Texture2D" uid="uid://cchn0xfdyd6kb" path="res://AnimationSheet.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://cs04qlv6cpheg" path="res://player_controller.gd" id="1_i3pqv"]
@@ -73,10 +73,48 @@ tracks/0/keys = {
 "values": [Rect2(6.5, 30.5, 11, 18), Rect2(30.5, 30.5, 11, 18), Rect2(54.5, 30.5, 11, 18), Rect2(78.5, 30.5, 11, 18), Rect2(78.5, 30.5, 11, 18)]
 }
 
+[sub_resource type="Animation" id="Animation_hqtel"]
+resource_name = "jump"
+length = 0.4
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(6.5, 78.5, 12, 18), Rect2(30.5, 78.5, 12, 18), Rect2(54.5, 78.5, 12, 18), Rect2(78.5, 74.5, 12, 20)]
+}
+
+[sub_resource type="Animation" id="Animation_b26j0"]
+resource_name = "falling"
+length = 0.1
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(102.5, 78.5, 12, 18)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_b26j0"]
 _data = {
 &"RESET": SubResource("Animation_2hs0m"),
+&"falling": SubResource("Animation_b26j0"),
 &"idle": SubResource("Animation_sweqy"),
+&"jump": SubResource("Animation_hqtel"),
 &"run": SubResource("Animation_dw050"),
 &"walk": SubResource("Animation_1jxqw")
 }
@@ -93,6 +131,19 @@ script = ExtResource("1_i3pqv")
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
 
+[node name="interface" parent="Camera2D" instance=ExtResource("4_hqtel")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 580.0
+offset_top = -283.0
+offset_right = 580.0
+offset_bottom = -283.0
+grow_horizontal = 1
+grow_vertical = 1
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
 [node name="PlayerAnimator" type="Node2D" parent="." node_paths=PackedStringArray("playercontroller", "animationplayer", "sprite")]
 script = ExtResource("2_hqtel")
 playercontroller = NodePath("..")
@@ -103,7 +154,7 @@ sprite = NodePath("Sprite2D")
 libraries = {
 &"": SubResource("AnimationLibrary_b26j0")
 }
-autoplay = "run"
+autoplay = "falling"
 
 [node name="Sprite2D" type="Sprite2D" parent="PlayerAnimator"]
 position = Vector2(0, -89.99999)
@@ -116,9 +167,3 @@ region_rect = Rect2(6.5, 6.5, 11, 18)
 position = Vector2(0, -89.99999)
 scale = Vector2(10, 10)
 shape = SubResource("CapsuleShape2D_i3pqv")
-
-[node name="interface" parent="." instance=ExtResource("4_hqtel")]
-offset_left = 580.0
-offset_top = -326.0
-offset_right = 580.0
-offset_bottom = -326.0

@@ -14,5 +14,10 @@ offset_bottom = -386.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="moneycounter" parent="." instance=ExtResource("1_6nxxo")]
-layout_mode = 1
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="moneycounter" parent="CanvasLayer" instance=ExtResource("1_6nxxo")]
+offset_left = -297.99994
+offset_top = 7.9999976
+offset_right = -176.99994
+offset_bottom = 48.000004
