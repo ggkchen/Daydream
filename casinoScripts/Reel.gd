@@ -6,6 +6,7 @@ extends Node2D
 var TWN
 var MS = 20
 var state 
+var amountOfTimesPlayed:int = 0
 enum {ROLL,STOP,ROLLBACK}
 var rollDuration = 3
 var rollBackDuration =0.5
@@ -63,9 +64,12 @@ func _roll(slot:Sprite2D,MSpeed):
 
 func _stopRoll():
 	TWN = create_tween().set_trans(Tween.TRANS_SPRING).set_ease(Tween.EASE_OUT).set_parallel()
-	var rng = randi_range(0,9)
+	var rng
+	if amountOfTimesPlayed>3:
+		rng = randi_range(0,9)
+	else:
+		rng = 7+amountOfTimesPlayed*2
 	var dur = 1.5
-
 	var finalPos = -100*rng
 	
 	var finalSlot
@@ -84,3 +88,4 @@ func _stopRoll():
 	await TWN.finished
 	print("Reeel ID",reelID," reel Image ", finalSlot.name ," POS : ",finalPos, " RNJESUS :",rng)
 	SigBank.rollFinished.emit(reelID,rng)
+	amountOfTimesPlayed+=1
