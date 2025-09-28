@@ -6,6 +6,11 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 var direction = 0
 
+#sets start position
+var start_pos = Vector2()
+func _ready():
+	start_pos = position
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -23,4 +28,9 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
+	#resets character
+	if position.y > 300:
+		position = start_pos
+		velocity = Vector2.ZERO
+	
 	move_and_slide()
