@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://3cvygnno1c1a"]
 
 [ext_resource type="Script" uid="uid://ckh6nsoxxvan7" path="res://casinoScene/confetti.gd" id="1_smimb"]
-[ext_resource type="Texture2D" uid="uid://dloirvdw0mqkw" path="res://Screenshot 2025-09-28 131255.png" id="2_ovyj8"]
+[ext_resource type="Texture2D" path="res://Screenshot 2025-09-28 131255.png" id="2_ovyj8"]
 [ext_resource type="Script" uid="uid://nbi08xyu4b78" path="res://casinoScene/confettii.gd" id="3_sf15k"]
 [ext_resource type="AudioStream" uid="uid://nyt01mnkn0bh" path="res://DODODODODOODOOODOOOOO.mp3" id="4_smimb"]
 

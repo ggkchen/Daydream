@@ -20,12 +20,9 @@ config/icon="res://icon.svg"
 SigBank="*res://casinoScripts/SignalBank.gd"
 Player_Controller="*res://Assets/Scripts/player_controller.gd"
 FadeScreen="*res://Assets/Scenes/Areas/fade_screen.tscn"
-<<<<<<< HEAD
 Audiocontrollerslotmachine="*res://Assets/Audiocontrollerslotmachine.tscn"
-CONFETTIITI="*res://confetti.tscn"
-=======
 AudioControllerMain="*res://Assets/Audio/audio_controller.tscn"
->>>>>>> 4b0df3225b2acb123808ad94b81fffa1576b21fc
+CONFETTIITI="*res://confetti.tscn"
 
 [input]
 

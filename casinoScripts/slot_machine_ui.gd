@@ -67,11 +67,10 @@ func _calculateWinning():
 		$moneychangeamount.add_theme_color_override("font_color",Color(0.0, 1.0, 0.0, 1.0))
 		Player_Controller.add_money(betResult)
 		$betAmount.max_value = money
-<<<<<<< HEAD
 		CONFETTIITI.play_confetti()
 		CONFETTIITI.play_music()
-=======
->>>>>>> 4b0df3225b2acb123808ad94b81fffa1576b21fc
+#=======
+#>>>>>>> 4b0df3225b2acb123808ad94b81fffa1576b21fc
 		#confettiiiti.play_confetti()
 	else:
 		$Result.text = "You lost!"
