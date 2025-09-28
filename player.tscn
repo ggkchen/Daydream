@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://b71p0iroqsc1q"]
 
 [ext_resource type="Texture2D" uid="uid://cchn0xfdyd6kb" path="res://AnimationSheet.png" id="1_4flbx"]
-[ext_resource type="Script" path="res://player_controller.gd" id="1_i3pqv"]
+[ext_resource type="Script" uid="uid://cs04qlv6cpheg" path="res://player_controller.gd" id="1_i3pqv"]
 [ext_resource type="Script" uid="uid://dcsr0h2kn5axe" path="res://player_animator.gd" id="2_hqtel"]
 [ext_resource type="PackedScene" uid="uid://do5v8hth8te5r" path="res://interface/interface.tscn" id="4_hqtel"]
 
@@ -86,9 +86,12 @@ radius = 5.0
 height = 18.0
 
 [node name="Player" type="CharacterBody2D"]
+platform_on_leave = 2
 script = ExtResource("1_i3pqv")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+position_smoothing_speed = 3.0
 
 [node name="PlayerAnimator" type="Node2D" parent="." node_paths=PackedStringArray("playercontroller", "animationplayer", "sprite")]
 script = ExtResource("2_hqtel")
